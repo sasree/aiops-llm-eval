@@ -100,7 +100,7 @@ aiops-llm-eval/
   project-b-rag/            ← runbook, 30–50 questions, Ragas + DeepEval scores
   project-c-capstone/       ← synthetic telemetry, summaries, GitHub Actions gate
   results/                  ← one results table, filled only from real runs
-
+```
 ## Results — fill only from real runs
 
 | Run | Cases | Score | Verdict |
@@ -111,7 +111,6 @@ aiops-llm-eval/
 | B — context precision | — | — | Not run yet |
 | B — context recall | — | — | Not run yet |
 | C — hallucination / faithfulness gate | — | — | Not run yet |
-```
 
 **Project A — 2026-11-17, ollama:chat:llama3.1:8b, Promptfoo 0.125.1, 5 cases (4 injection + 1 control)**
 
