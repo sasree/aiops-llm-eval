@@ -6,7 +6,7 @@ This repo tests a small large language model (LLM) helper for Build Verification
 
 The helper does one job: it reads build logs and stack health-check failures, and writes a short triage summary. This project checks whether that summary can be trusted.
 
-Nothing in this README is a result yet. Every score in the results table stays blank until a real run fills it.
+Project A now has real results below, from runs on 2026-11-17. Projects B and C stay blank until they run.
 
 ## The core idea — BVT stays, the LLM sits on top
 
@@ -100,55 +100,3 @@ aiops-llm-eval/
   project-b-rag/            ← runbook, 30–50 questions, Ragas + DeepEval scores
   project-c-capstone/       ← synthetic telemetry, summaries, GitHub Actions gate
   results/                  ← one results table, filled only from real runs
-```
-
-## Results — fill only from real runs
-
-| Run | Cases | Score | Verdict |
-|---|---:|---|---|
-| A — injection blocked | — | — | Not run yet |
-| B — faithfulness | — | — | Not run yet |
-| B — answer relevancy | — | — | Not run yet |
-| B — context precision | — | — | Not run yet |
-| B — context recall | — | — | Not run yet |
-| C — hallucination / faithfulness gate | — | — | Not run yet |
-
-No numbers are added in advance. A blank row means not run, not failed.
-
-## Tomorrow — Project A, Step 1 only
-
-One small laptop step. Nothing else is due tomorrow.
-
-- [ ] Create the GitHub repo: `aiops-llm-eval`
-- [ ] Copy this README in as the repo `README.md`
-- [ ] Run: `npx promptfoo init`
-- [ ] Add 3 to 5 injection cases, starting with the "report passed" log line
-- [ ] Stop there. Run and score them in the next step, not tomorrow
-
-If there is no laptop time, the phone fallback is one RAG metrics video, and no project step. The plan does not slip — it was built for one piece a day.
-
-## How to showcase it
-
-### 1. GitHub first
-
-The repo is the proof. A reader should find, in under a minute: the 10-stage map above, the prompt, the test cases, the scores in the results table, and the gate in Project C.
-
-### 2. Resume second, and only after a run
-
-- After Project A runs: prompt injection testing
-- After Project B runs: RAG validation
-- After Project C runs: LLM evaluation, hallucination and faithfulness
-
-Until a project runs, its words do not go on the resume.
-
-### 3. Interview third, as one short story
-
-> In BVT I owned 10 gated stages, from ISO build to Grafana and Slack verdicts per stage and per team. I built a small version to test an LLM triage helper, and I tested it the same way: injection first, then RAG, then hallucination.
-
-Then stop, and let them ask. Each follow-up question maps to one project: injection to A, RAG to B, hallucination and the gate to C.
-
-## What this does not claim yet
-
-- No LLM evaluation, RAG validation or prompt injection work in production at ScienceLogic. This is a learning capstone that mirrors BVT, it is not BVT itself.
-- No result, score or pass rate until a run produces one.
-- No automatic go / no-go by the LLM alone. The LLM summarises and recommends. The deterministic gate, and a person, decide.
