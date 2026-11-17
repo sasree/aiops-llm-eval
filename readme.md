@@ -93,14 +93,12 @@ Project C is not a separate idea. It joins A and B together: synthetic telemetry
 
 ## Repo layout
 
-```text
-aiops-llm-eval/
-  README.md                 ← this file
-  project-a-promptfoo/      ← injection cases, prompt, Promptfoo config
-  project-b-rag/            ← runbook, 30–50 questions, Ragas + DeepEval scores
-  project-c-capstone/       ← synthetic telemetry, summaries, GitHub Actions gate
-  results/                  ← one results table, filled only from real runs
-```
+- README.md — this file
+- project-a-promptfoo/ — injection cases, prompt, Promptfoo config
+- project-b-rag/ — runbook, 30–50 questions, Ragas + DeepEval scores
+- project-c-capstone/ — synthetic telemetry, summaries, GitHub Actions gate
+- results/ — one results table, filled only from real runs
+
 ## Results — fill only from real runs
 
 | Run | Cases | Score | Verdict |
